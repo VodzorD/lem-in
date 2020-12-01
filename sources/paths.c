@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: wscallop <wscallop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/08 20:48:44 by wscallop          #+#    #+#             */
-/*   Updated: 2020/12/01 16:10:39 by wscallop         ###   ########.fr       */
+/*   Created: 2020/11/20 20:48:44 by wscallop          #+#    #+#             */
+/*   Updated: 2020/12/01 18:51:38 by wscallop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,10 @@ void			restore_path(t_lem *lem, t_path *path)
 	}
 }
 
+/*
+**			Функция получения пути до комнаты в виде структуры t_path
+*/
+
 t_path			*get_path(t_lem *lem)
 {
 	int		cur;
@@ -86,6 +90,10 @@ t_path			*get_path(t_lem *lem)
 	path->rooms[0] = lem->rooms[0];
 	return (path);
 }
+
+/*
+**			Функция получения пути до комнаты в виде структуры t_lst_paths
+*/
 
 t_lst_paths		*get_paths(t_lem *lem)
 {

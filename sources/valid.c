@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: wscallop <wscallop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/08 19:31:15 by wscallop          #+#    #+#             */
-/*   Updated: 2020/12/01 16:10:15 by wscallop         ###   ########.fr       */
+/*   Created: 2020/11/24 19:31:15 by wscallop          #+#    #+#             */
+/*   Updated: 2020/12/01 18:51:32 by wscallop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int		is_number_of_ants(char *s)
 **		Функция проверки информации комнаты (валидна ли она)
 */
 
-int		is_room(char *s)
+int				is_room(char *s)
 {
 	int	i;
 
@@ -58,7 +58,7 @@ int		is_room(char *s)
 **		Функция проверки информации о соединении комнат
 */
 
-int		is_link(char *s)
+int				is_link(char *s)
 {
 	int	i;
 
@@ -76,7 +76,14 @@ int		is_link(char *s)
 	return (s[i] ? 0 : 1);
 }
 
-int		ret(t_valid_info *inf)
+/*
+**		Функция валидности графа
+**
+**		Смотрит на флаги структуры t_valid_info, в частности
+**		на rs, re и l (см. lem.h)
+*/
+
+static int		ret(t_valid_info *inf)
 {
 	if (inf->rs != 1 || inf->re != 1)
 	{
@@ -96,7 +103,7 @@ int		ret(t_valid_info *inf)
 **		Функция проверки информации после получения первичных ранных
 */
 
-int		postvalid(t_lst *list)
+int				postvalid(t_lst *list)
 {
 	t_valid_info	*inf;
 
