@@ -6,7 +6,7 @@
 /*   By: wscallop <wscallop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 19:58:33 by wscallop          #+#    #+#             */
-/*   Updated: 2020/11/30 21:27:17 by wscallop         ###   ########.fr       */
+/*   Updated: 2020/12/01 16:04:14 by wscallop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static t_lst	*get_first_elem(void)
 **		и остальных при помощи get_next_line()
 */
 
-t_lst	*preparse(void)
+t_lst			*preparse(void)
 {
 	t_lst	*list;
 	t_lst	*head;
@@ -79,7 +79,7 @@ t_lst	*preparse(void)
 **		Обычный счетчик
 */
 
-int		get_number_of_rooms(t_lst *list)
+int				get_number_of_rooms(t_lst *list)
 {
 	int	res;
 
@@ -99,7 +99,7 @@ int		get_number_of_rooms(t_lst *list)
 **		освобождает память структуры t_lst (см. rmlst())
 */
 
-t_lem	*ret_error(t_lst *list, int flag_error)
+t_lem			*ret_error(t_lst *list, int flag_error)
 {
 	if (flag_error)
 		error();
@@ -118,7 +118,7 @@ t_lem	*ret_error(t_lst *list, int flag_error)
 **		5. Заполнение структуры t_lem
 */
 
-t_lem	*parse(void)
+t_lem			*parse(void)
 {
 	t_lst	*list;
 	t_lem	*lem;

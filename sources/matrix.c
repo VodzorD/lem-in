@@ -6,7 +6,7 @@
 /*   By: wscallop <wscallop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 19:44:00 by wscallop          #+#    #+#             */
-/*   Updated: 2020/11/30 22:04:45 by wscallop         ###   ########.fr       */
+/*   Updated: 2020/12/01 16:09:01 by wscallop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,12 @@ static char			*get_b(char *s)
 
 	start = 0;
 	i = 0;
-	while (s[start++] != '-');
+	while (s[start] != '-')
+		start++;
+	start++;
 	len = 0;
-	while (s[len++ + start]);
+	while (s[len + start])
+		len++;
 	b = (char *)ft_memalloc(sizeof(char) * len + 1);
 	while (s[start])
 		b[i++] = s[start++];
@@ -110,7 +113,6 @@ static inline void	fill(int **m, int j, int i)
 **		В структуре t_lst беруться инф-ия об пересечении, осуществяется
 **		ее проверка, затем получаем информацию об из координатах и заносим ее
 **		в матрицу пересечений. Процедура поторяется, пока есть пересечения
-**
 */
 
 int					fill_matrix(t_lem *lem, t_lst *list)

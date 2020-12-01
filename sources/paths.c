@@ -6,7 +6,7 @@
 /*   By: wscallop <wscallop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 20:48:44 by wscallop          #+#    #+#             */
-/*   Updated: 2020/11/30 22:17:28 by wscallop         ###   ########.fr       */
+/*   Updated: 2020/12/01 16:10:39 by wscallop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 **			Функция удаления информации о соединении комнаты
 */
 
-static void			reset(t_lem *lem, int r)
+static void		reset(t_lem *lem, int r)
 {
 	int j;
 	int i;

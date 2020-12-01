@@ -6,7 +6,7 @@
 /*   By: wscallop <wscallop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 22:25:28 by wscallop          #+#    #+#             */
-/*   Updated: 2020/11/30 21:02:43 by wscallop         ###   ########.fr       */
+/*   Updated: 2020/12/01 16:07:50 by wscallop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 **		За максимум берется сумма длины пройденного пути и муравьёв
 */
 
-static inline int		get_hardes_path(t_lst_paths *paths)
+static inline int	get_hardes_path(t_lst_paths *paths)
 {
 	t_lst_paths	*p;
 	int			max;
@@ -37,15 +37,15 @@ static inline int		get_hardes_path(t_lst_paths *paths)
 /*
 **				Функция нахождения минимального пути (если их несколько)
 **
-**		За миниму берется максимум (см. get_hardes_path())		
+**		За миниму берется максимум (см. get_hardes_path())
 **
 **		В отличии от максимального пути ищется не только значение пути,
 **		но и ссылка на сам путь, далее найденый путь заносится в массив
 **		ants[].
 */
 
-
-void			many_paths(t_path **ants, int num_of_ants, t_lst_paths *paths)
+void				many_paths(t_path **ants, int num_of_ants,
+						t_lst_paths *paths)
 {
 	t_path		*shortest_path;
 	t_lst_paths	*p;
@@ -80,11 +80,10 @@ void			many_paths(t_path **ants, int num_of_ants, t_lst_paths *paths)
 **		(см. many_paths())
 */
 
-static inline void		init_ants(t_path **ants, int number_of_ants, t_lst_paths *paths)
+static inline void	init_ants(t_path **ants, int number_of_ants,
+						t_lst_paths *paths)
 {
-	int			min;
 	t_lst_paths	*p;
-	t_path		*shortest_path;
 	int			i;
 
 	p = paths;
@@ -101,7 +100,8 @@ static inline void		init_ants(t_path **ants, int number_of_ants, t_lst_paths *pa
 		many_paths(ants, number_of_ants, paths);
 }
 
-/*				Функция запуска муравьев по наикратчайшему пути
+/*
+**				Функция запуска муравьев по наикратчайшему пути
 **
 **		1. Выделение памяти под массив пути муравьев ants[num_of_ants]
 **		2. Выдиление памяти под массив муравье fin[num_of_ants]
@@ -112,12 +112,11 @@ static inline void		init_ants(t_path **ants, int number_of_ants, t_lst_paths *pa
 **		7. Очистка памяти 2 массивов: ants[] и fin[]
 */
 
-void			run_ants(int num_of_ants, t_lst_paths *paths)
+void				run_ants(int num_of_ants, t_lst_paths *paths)
 {
 	t_path	**ants;
 	int		*fin;
 	t_room	*end;
-	int		i;
 
 	ants = (t_path**)ft_memalloc(sizeof(t_path*) * num_of_ants);
 	fin = (int*)ft_memalloc(sizeof(int) * num_of_ants);

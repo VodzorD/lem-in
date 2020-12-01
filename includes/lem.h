@@ -6,7 +6,7 @@
 /*   By: wscallop <wscallop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 22:31:07 by wscallop          #+#    #+#             */
-/*   Updated: 2020/11/30 21:59:53 by wscallop         ###   ########.fr       */
+/*   Updated: 2020/12/01 16:13:05 by wscallop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 **
 **		name - название комнаты
 **		coord_x, coord_y - координаты комнаты
-**		steps - 
+**		steps -
 **		ants - наличие муравьев в комнате
 */
 
@@ -42,7 +42,7 @@ typedef struct		s_room {
 **		e - конец графа
 **		l - соединение между комнатами
 **		c - комментарий
-**		o - комментарии, не доступные к выводу	
+**		o - комментарии, не доступные к выводу
 */
 
 typedef struct		s_lst {
@@ -59,7 +59,7 @@ typedef struct		s_lst {
 
 /*
 **		Структура для прохождения пути
-**		
+**
 **		len - длина пути
 **		rooms - комнаты графа
 **		ants_num - кол-во муравьев
@@ -73,7 +73,7 @@ typedef struct		s_path {
 
 /*
 **		Структура для списка путей
-**		
+**
 **		next - ссылка следующий путь
 */
 
@@ -93,7 +93,6 @@ typedef struct		s_lst_paths {
 **		list - оценка графа (см. t_lst)
 */
 
-
 typedef struct		s_lem {
 	int				num_of_ants;
 	int				num_of_rooms;
@@ -108,9 +107,6 @@ typedef struct		s_lem {
 **				(карты)
 **
 **		(???)
-**
-**
-**
 */
 
 typedef struct		s_valid_info {

@@ -6,7 +6,7 @@
 /*   By: wscallop <wscallop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 19:31:15 by wscallop          #+#    #+#             */
-/*   Updated: 2020/11/30 22:47:43 by wscallop         ###   ########.fr       */
+/*   Updated: 2020/12/01 16:10:15 by wscallop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ int		is_number_of_ants(char *s)
 	i = 0;
 	if (!ft_strlen(s))
 		return (0);
-	while (s[i++] && ft_isdigit(s[i]));
+	while (s[i] && ft_isdigit(s[i]))
+		i++;
 	return (s[i] ? 0 : 1);
 }
 
 /*
 **		Функция проверки информации комнаты (валидна ли она)
-**
 */
 
 int		is_room(char *s)

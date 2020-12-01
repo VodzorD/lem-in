@@ -6,7 +6,7 @@
 /*   By: wscallop <wscallop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/11 03:39:25 by wscallop          #+#    #+#             */
-/*   Updated: 2020/11/30 22:43:51 by wscallop         ###   ########.fr       */
+/*   Updated: 2020/12/01 16:09:53 by wscallop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ static inline void	l_step(t_room *room, int *finished, t_room *end, int i)
 
 /*
 **			Функция записи и вывода информацуии о первом шаге муравья
-**
 */
 
 static inline void	step_f(t_path **ants, int *finished, int i, int j)
@@ -63,8 +62,8 @@ void				step(t_path **ants, int number_of_ants,
 	int i;
 	int j;
 
-	i = 0;
-	while (i < number_of_ants)
+	i = -1;
+	while (++i < number_of_ants)
 	{
 		j = 0;
 		while (++j < ants[i]->len - 1)
@@ -84,6 +83,5 @@ void				step(t_path **ants, int number_of_ants,
 			}
 		}
 		step_f(ants, fin, i, j);
-		i++;
 	}
 }
